@@ -1,4 +1,4 @@
-FROM tomsowerby/php-5.3:cli
+FROM php:5.6-cli
 
 # BASE
 
@@ -8,16 +8,12 @@ RUN apt-get update && \
     libfreetype6-dev \
     libjpeg62-turbo-dev \
     libmcrypt-dev \
-    libpng12-dev \
     libbz2-dev \
-    php-pear \
     curl \
     git \
+    apt-utils \
+    software-properties-common \
   && rm -r /var/lib/apt/lists/*
-
-# Freetype 5.3 bug
-RUN mkdir /usr/include/freetype2/freetype \
-   && ln -s /usr/include/freetype2/freetype.h /usr/include/freetype2/freetype/freetype.h
 
 # PHP Extensions
 RUN docker-php-ext-install mcrypt zip bz2 mbstring \
