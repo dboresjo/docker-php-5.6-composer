@@ -7,4 +7,8 @@ We have some legacy projects that need to be build in an old PHP 5.6 environment
 
 This docker image is intended to allow composer to be run locally on that PHP version.
 
+~~~
+alias composer="docker run -v $(pwd):/app -it dboresjo/php-5.6-composer"
+~~~
+
 Please report bugs for this container to the [GitHub issue](https://github.com/dboresjo/docker-php-5.6-composer/issues) page.

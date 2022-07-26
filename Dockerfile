@@ -42,7 +42,7 @@ ENTRYPOINT ["composer", "--ansi"]
 
 # COMPOSER
 
-ENV COMPOSER_VERSION 1.0.0-alpha11
+ENV COMPOSER_VERSION 2.2.11
 
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --version=${COMPOSER_VERSION}
